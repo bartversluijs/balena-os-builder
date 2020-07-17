@@ -17,3 +17,10 @@ For `balena deploy`, use this:
 ```
 balena deploy <my-app> -h <device-ip> -p <SOCK_PORT> --source <source-map>
 ```
+
+## Directories
+- Directory: `src`
+  The source files for this container
+
+- Directory `.docker`
+  Pre-defined Dockerfiles, because Docker can't work with the `Dockerfile.template` file. This is used for pre-built Docker images.
