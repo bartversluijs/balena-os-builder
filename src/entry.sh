@@ -15,4 +15,5 @@ chgrp www-data /var/run/balena.sock
 envsubst < /tmp/balena-sock.conf > /etc/nginx/conf.d/balena-sock.conf
 
 # Start nginx
+echo "$(date) : Starting socket on ${SOCK_PORT} (${SERVER_NAME})"
 nginx -g "daemon off;"
