@@ -18,6 +18,11 @@ For `balena deploy`, use this:
 balena deploy <my-app> -h <device-ip> -p <SOCK_PORT> --source <source-map>
 ```
 
+You can also use this container for building with Docker, like so:
+```
+docker -H <device-ip>:<SOCK_PORT> build <options>
+```
+
 ## Directories
 - Directory: `src`
   The source files for this container
