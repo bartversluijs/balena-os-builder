@@ -12,8 +12,8 @@ rm -rf /etc/nginx/conf.d/default.conf
 chgrp www-data /var/run/balena.sock
 
 # Apply environment variables to balena-sock.conf
-envsubst < /tmp/balena-sock.conf > /etc/nginx/conf.d/balena-sock.conf
+envsubst '${SOCK_PORT} ${SERVER_NAME}' < /tmp/nginx.conf > /etc/nginx/nginx.conf
 
 # Start nginx
 echo "$(date) : Starting socket on ${SOCK_PORT} (${SERVER_NAME})"
-nginx -g "daemon off;"
+nginx

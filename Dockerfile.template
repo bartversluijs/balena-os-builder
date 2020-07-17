@@ -12,7 +12,7 @@ COPY ./src/entry.sh /usr/src/entry.sh
 RUN ["chmod", "+x", "/usr/src/entry.sh"]
 
 # Add nginx config
-COPY ./src/balena-sock.conf /tmp/balena-sock.conf
+COPY ./src/nginx.conf /tmp/nginx.conf
 
 # Add label for balena-sock
 LABEL io.balena.features.balena-socket=1
