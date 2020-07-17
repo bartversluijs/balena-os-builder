@@ -18,7 +18,7 @@ COPY ./src/balena-sock.conf /tmp/balena-sock.conf
 LABEL io.balena.features.balena-socket=1
 
 # Default SERVER_NAME is _ (listening to all names)
-ENV SERVER_NAME=_
+ENV SERVER_NAME=0.0.0.0
 
 # Default SOCK_PORT is 3000
 ENV SOCK_PORT=3000
